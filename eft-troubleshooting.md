@@ -1,4 +1,4 @@
-# Debugging EFT
+# T
 
 Working with EFT can be quite challenging due to lack of available debugging
 tools. Couple of things you can do:
