@@ -62,17 +62,6 @@ In all versions of the game, the sole function with the name `RunValidation` is
 responsible for all anti-cheat checks that happen in offline raids and in the
 main menu.
 
-## File integrity
-
-Up until 0.12.10, EFT used launcher-side integrity validation by comparing the
-hashes inside `ConsistencyInfo` with the game files. Starting 0.12.11, the
-client also validates file integrity on startup using the same method.
-
-The validation check is split in two parts: the general files and game assets.
-For running tarkov offline with deobfuscation, you can get away with disabling
-the general files scan. If you want to mod the game bundles, the latter scan
-must also be disabled.
-
 ## Comminucation
 
 ### Server
