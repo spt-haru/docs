@@ -1,11 +1,12 @@
-# Deobfuscation
+# Deobfuscating the client
 
 ## Requirements
 
-- de4dot
+- de4dot ([link](https://github.com/spt-haru/de4dot))
+- dnspy ([link](https://github.com/spt-haru/dnspy))
 - `Assembly-CSharp.dll` (from live EFT)
 
-## Steps
+### Steps
 
 1. dnspy > file > open > `Assembly-CSharp.dll`
 2. dnspy > file > export to project > export
@@ -23,14 +24,14 @@ internal sealed class \uED30
 }
 ```
 
-5. de4dot > clean the assembly (change `0x0600F6FF` to the token)
+5. Run the following (change `0x0600F6FF` to the token)
 
 ```cmd
 de4dot-x64.exe --un-name "!^<>[a-z0-9]$&!^<>[a-z0-9]__.*$&![A-Z][A-Z]\$<>.*$&^[a-zA-Z_<{$][a-zA-Z_0-9<>{}$.`-]*$" "Assembly-CSharp.dll" --strtyp delegate --strtok 0x0600F6FF
 pause
 ```
 
-### Fix ResolutionScope error
+### 2. Fix ResolutionScope error
 
 1. copy-paste `Assembly-CSharp-cleaned.dll` into `<gamedir>/EscapeFromTarkov_Data/Managed/`
 2. dnspy > file > open > `Assembly-CSharp-cleaned.dll`
