@@ -7,7 +7,7 @@ Patches required to obtain server data from the client without using external to
 - dnspy ([link](https://github.com/spt-haru/dnspy))
 - `Assembly-CSharp-cleaned.dll` (produced by deobfuscation)
 
-## 1. Modifications
+## Patches
 
 These are done in dnspy on `Assembly-CSharp-cleaned.dll`.
 
@@ -54,12 +54,9 @@ if (System.IO.Directory.CreateDirectory(path).Exists)
 }
 ```
 
-## 2. Finalization
+## Injection
 
-Rename `Assembly-CSharp-cleaned.dll` to `Assembly-CSharp.dll`.
-
-## 3. Injection
-
-1. Copy-paste `Assembly-CSharp.dll` into `EscapeFromTarkov_Data`, do not interact with the prompt yet
-2. Start the game from Battlestate Games Launcher
-3. As soon as the launcher closes, click "replace" in the prompt
+1. Rename `Assembly-CSharp-cleaned.dll` to `Assembly-CSharp.dll`.
+2. Copy-paste `Assembly-CSharp.dll` into `EscapeFromTarkov_Data`, do not interact with the prompt yet
+3. Start the game from Battlestate Games Launcher
+4. As soon as the launcher closes, click "replace" in the prompt
