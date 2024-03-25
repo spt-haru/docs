@@ -26,7 +26,7 @@ launch arguments for starting the game:
 EscapeFromTarkov.exe -token=<LoginTokenBase64> -config={"backendUrl":"http://prod.escapefromtarkov.com","version":"live"}
 ```
 
-The config in the launch arugments is in the following format:
+The config in the launch arguments is in the following format:
 
 ```jsonc
 {
