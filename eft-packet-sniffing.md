@@ -47,7 +47,7 @@ if (System.IO.Directory.CreateDirectory(path).Exists)
 ## File integrity
 
 1. search for `RunFilesChecking`
-2. replace `RunFIlesChecking`'s method body with this:
+2. replace `RunFilesChecking`'s method body with this:
 
 ```cs
 {
